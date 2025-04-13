@@ -12,7 +12,7 @@ public class Triangle extends AbstractGeometricObject{
 
     @Override
     public boolean contains(int x, int y) {
-        return (x >= position.x && x <= position.x+a && y <= position.y && y >= position.y+a);
+        return (x >= position.x && x <= position.x+a && y <= position.y && y >= position.y-a);
     }
 
     @Override
