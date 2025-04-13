@@ -45,7 +45,6 @@ public class MainWindow extends JFrame {
                         //we cycle through objects to see if we are hovering over one. It's okay for a couple shapes.
                         for (AbstractGeometricObject object : objects) {
                             if (object.contains(e.getX(), e.getY())) {
-                                System.out.println("FOUND METH");
                                 new Thread(() -> {       //if we put it into a new thread, it will allow mouseReleased to function properly
                                     while (mouseHeld) {
                                         object.setPosition(new Point(panel.getMousePosition()));      //updating the position of the shape using most recent mouse coordinates
